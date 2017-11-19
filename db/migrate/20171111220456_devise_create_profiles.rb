@@ -8,6 +8,7 @@ class DeviseCreateProfiles < ActiveRecord::Migration[5.1]
       t.string :first_name
       t.string :last_name
       t.string :phone
+      t.references :profileable, polymorphic: true, index: true
 
       ## Recoverable
       t.string   :reset_password_token
