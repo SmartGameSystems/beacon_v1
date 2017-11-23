@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119185321) do
+ActiveRecord::Schema.define(version: 20171123042339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clients", force: :cascade do |t|
+    t.integer "unreads"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "coaches", force: :cascade do |t|
+    t.integer "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,6 +38,12 @@ ActiveRecord::Schema.define(version: 20171119185321) do
     t.datetime "last_sign_in_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.integer "profileable_id"
+    t.string "profileable_type"
     t.index ["email"], name: "index_profiles_on_email", unique: true
     t.index ["reset_password_token"], name: "index_profiles_on_reset_password_token", unique: true
   end
