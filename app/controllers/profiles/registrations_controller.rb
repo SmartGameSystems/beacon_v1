@@ -7,7 +7,7 @@ class Profiles::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # POST /resource
+  # POST /profile
   def create
     super
   end
