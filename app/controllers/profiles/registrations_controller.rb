@@ -1,11 +1,12 @@
 class Profiles::RegistrationsController < Devise::RegistrationsController
+  # https://github.com/plataformatec/devise/blob/master/app/controllers/devise/registrations_controller.rb
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /profile
   def create
@@ -18,14 +19,14 @@ class Profiles::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    super
+  end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
