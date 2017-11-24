@@ -8,6 +8,11 @@ class ClientsController < ApplicationController
   def show
   end
 
+  def create
+    client = Client.new client_params
+    client.save!
+  end
+
   # GET /client/edit
   def edit
     # edit
