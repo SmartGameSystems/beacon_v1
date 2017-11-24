@@ -17,8 +17,11 @@ RSpec.describe Client, type: :model do
     @client.unreads = -1
     expect(@client).to_not be_valid
   end
-  
+
+  # it "returns a profile" do
+  #   expect(@client.profile).to be_valid
+  # end
+
   it "is invalid without a coach"
-  it "returns a profile"
   it "returns a coach"
 end
