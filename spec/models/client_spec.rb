@@ -13,7 +13,11 @@ RSpec.describe Client, type: :model do
     expect(@client.unreads).to eq 0
   end
 
-  it "is invalid if it has fewer than zero unreads"
+  it "is invalid if it has fewer than zero unreads" do
+    @client.unreads = -1
+    expect(@client).to_not be_valid
+  end
+  
   it "is invalid without a coach"
   it "returns a profile"
   it "returns a coach"
