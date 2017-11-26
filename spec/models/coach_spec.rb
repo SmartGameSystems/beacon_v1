@@ -25,11 +25,14 @@ RSpec.describe Coach, type: :model do
     coach = Coach.create
     expect(coach).to_not be_valid
   end
-  # it 'returns a profile' do
-  #   @profile.profileable = @coach
-  #   @profile.save!
-  #   expect(@coach.profile).to eq @profile
-  # end
 
-  # it 'returns a profile with profileable type of "Coach"'
+  it 'returns a profile' do
+    @profile.profileable = @coach
+    @profile.save!
+    expect(@coach.profile).to be_valid
+  end
+
+  it 'returns a profile with profileable type of "Coach"' do
+    expect(@coach.profile.profileable_type).to eq "Coach"
+  end
 end
