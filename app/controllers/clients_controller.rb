@@ -13,11 +13,6 @@ class ClientsController < ApplicationController
     client.save!
   end
 
-  # GET /client/edit
-  def edit
-    # edit
-  end
-
   # PUT /client
   def update
   end
