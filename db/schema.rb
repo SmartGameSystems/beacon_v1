@@ -16,7 +16,11 @@ ActiveRecord::Schema.define(version: 20171123181126) do
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "unreads"
+=======
+    t.integer "unreads", default: 0
+>>>>>>> 977fb9c714a90e4b370889d493c1659858e1598b
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,6 +48,12 @@ ActiveRecord::Schema.define(version: 20171123181126) do
     t.datetime "last_sign_in_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.integer "profileable_id"
+    t.string "profileable_type"
     t.index ["email"], name: "index_profiles_on_email", unique: true
     t.index ["reset_password_token"], name: "index_profiles_on_reset_password_token", unique: true
   end
