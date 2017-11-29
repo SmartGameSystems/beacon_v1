@@ -16,11 +16,7 @@ ActiveRecord::Schema.define(version: 20171123181126) do
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
-<<<<<<< HEAD
-    t.integer "unreads"
-=======
     t.integer "unreads", default: 0
->>>>>>> 977fb9c714a90e4b370889d493c1659858e1598b
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
