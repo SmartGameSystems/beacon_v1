@@ -4,11 +4,6 @@ class DeviseCreateProfiles < ActiveRecord::Migration[5.1]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :username
-      t.string :first_name
-      t.string :last_name
-      t.string :phone
-      t.references :profileable, polymorphic: true, index: true
 
       ## Recoverable
       t.string   :reset_password_token
