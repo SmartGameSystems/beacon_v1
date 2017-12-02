@@ -1,0 +1,2 @@
+class Virtualform < ApplicationRecord
+end
