@@ -6,27 +6,25 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-
-console.log('Hello World from Webpacker')
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import {
+  HashRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import Login from '../components/Login.js'
+import Welcome from '../components/Welcome.js'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Router>
+      <div>
+        <Route exact path="/" component={Welcome} />
+        <Route path="/login" component={Login} />
+      </div>
+    </Router>,
     document.body.appendChild(document.createElement('div')),
   )
 })

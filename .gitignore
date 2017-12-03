@@ -17,6 +17,6 @@
 /public/packs
 /public/packs-test
 /node_modules
-
+/config/database.yml
 # Ignore sensitive information
 .protected
