@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171202224647) do
+ActiveRecord::Schema.define(version: 20180106214639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,14 @@ ActiveRecord::Schema.define(version: 20171202224647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["virtualform_id"], name: "index_questions_on_virtualform_id"
+  end
+
+  create_table "v360s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "client_id"
+    t.integer "coach_id"
+    t.integer "formable_id"
   end
 
   create_table "virtualforms", force: :cascade do |t|
